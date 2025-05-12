@@ -331,6 +331,52 @@ b {
   border: var(--border);
   border-radius: var(--border-radius-btn);
 }
+.button--fill {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border-color: var(--color-accent);
+}
+@media (any-hover: hover) {
+  .button--fill:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .button--fill:active {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 0.625rem;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius-btn);
+}
+@media (any-hover: hover) {
+  .link:hover {
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+}
+@media (any-hover: none) {
+  .link:active {
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+}
+@media (width <= 47.99875rem) {
+  .link {
+    color: var(--color-green-dark);
+    border: 1px solid var(--color-green-dark);
+  }
+}
 
 @media (width <= 47.99875rem) {
   .tabs__header {
@@ -640,6 +686,66 @@ b {
 }
 .rating-view__star.is-active {
   background: url("/icons/star.svg") center/contain no-repeat;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 2.0625rem;
+  margin-block: 3.125rem;
+}
+@media (width <= 47.99875rem) {
+  .reviews {
+    row-gap: 1.875rem;
+    margin-top: 1.5rem;
+    align-items: center;
+  }
+}
+.reviews__description {
+  max-width: 32.6875rem;
+}
+
+.where-product {
+  display: flex;
+  column-gap: 11.1875rem;
+  margin-block: 3.125rem;
+}
+@media (width <= 90.06125rem) {
+  .where-product {
+    column-gap: 4.375rem;
+  }
+}
+@media (width <= 66.68625rem) {
+  .where-product {
+    column-gap: 1.25rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .where-product {
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+}
+.where-product__link-actions {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.where-product__inner {
+  display: grid;
+  row-gap: 1.5625rem;
+  margin-top: 1.0625rem;
+}
+@media (width <= 47.99875rem) {
+  .where-product__inner {
+    justify-content: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .where-product__image {
+    width: 21rem;
+    height: 18.4375rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

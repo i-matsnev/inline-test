@@ -1,0 +1,21 @@
+@use '../helpers' as *;
+
+.link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: rem(10);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius-btn);
+
+  @include hover {
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+
+  @include mobile {
+    color: var(--color-green-dark);
+    border: 1px solid var(--color-green-dark);
+  }
+}

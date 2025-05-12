@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.where-product {
+  display: flex;
+  column-gap: rem(179);
+  margin-block: rem(50);
+
+  @include laptop {
+    column-gap: rem(70);
+  }
+
+  @include tablet {
+    column-gap: rem(20);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: rem(24);
+  }
+
+  &__link-actions {
+    display: flex;
+    column-gap: rem(8);
+  }
+
+  &__inner {
+    display: grid;
+    row-gap: rem(25);
+    margin-top: rem(17);
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    @include mobile {
+      width: rem(336);
+      height: rem(295);
+    }
+  }
+}

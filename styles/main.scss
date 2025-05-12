@@ -5,6 +5,7 @@
 @use 'globals';
 
 @use 'blocks/button';
+@use 'blocks/link';
 @use 'blocks/tabs';
 @use 'blocks/grid';
 @use 'blocks/about-product';
@@ -13,3 +14,5 @@
 @use 'blocks/cards';
 @use 'blocks/card-product';
 @use 'blocks/rating-view';
+@use 'blocks/reviews';
+@use 'blocks/where-product';

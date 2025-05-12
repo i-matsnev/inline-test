@@ -9,4 +9,15 @@
   color: var(--color-accent);
   border: var(--border);
   border-radius: var(--border-radius-btn);
+
+  &--fill {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    border-color: var(--color-accent);
+
+    @include hover {
+      background-color: transparent;
+      color: var(--color-accent);
+    }
+  }
 }
