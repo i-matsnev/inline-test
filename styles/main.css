@@ -203,7 +203,7 @@ svg * {
   --color-green-dark: #043E44;
   --color-red: #ff3E44;
   --color-accent: #429F3A;
-  --container-width: 90rem;
+  --container-width: 66.625rem;
   --container-padding-x: 11.6875rem;
   --border: 1px solid var(--color-border);
   --border-light: 1px solid #b2b2b270;
@@ -710,11 +710,6 @@ b {
   display: flex;
   column-gap: 11.1875rem;
   margin-block: 3.125rem;
-}
-@media (width <= 90.06125rem) {
-  .where-product {
-    column-gap: 4.375rem;
-  }
 }
 @media (width <= 66.68625rem) {
   .where-product {
