@@ -1,0 +1,135 @@
+@use '../helpers' as *;
+
+.card-product {
+  position: relative;
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--border-radius);
+
+  @include mobile {
+    display: flex;
+    padding: rem(28) rem(21) rem(21) rem(2);
+  }
+  
+  &__image {
+    width: rem(248);
+    height: auto;
+
+    @include mobile {
+      width: rem(100);
+      height: rem(94);
+
+      border-radius: var(--border-radius-smaller);
+    }
+  }
+
+  &__name {
+    display: grid;
+    padding: rem(14) 0 0 rem(12);
+    row-gap: rem(7);
+
+    @include mobile {
+      padding: 0 0 0 rem(4);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+
+    @include mobile {
+      font-size: rem(15);
+    }
+  }
+
+  &__owner {
+    color: var(--color-gray);
+  }
+
+  &__price {
+    @include fluid-text(20, 18);
+
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding: rem(15) rem(13);
+    font-weight: 600;
+    line-height: .9;
+
+    @include mobile {
+      justify-content: end;
+      padding-inline: 0;
+      font-weight: 700;
+    }
+
+    & span {
+      @include fluid-text(12, 13);
+
+      color: var(--color-gray-light);
+      font-weight: 400;
+
+      @include mobile {
+        color: #4d4b4b;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__button-svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: rem(60) 0 0 rem(60);
+    color: var(--color-light);
+    padding: rem(6) rem(21);
+
+    @include hover {
+      background-color: transparent;
+      color: var(--color-accent);
+    }
+  }
+
+  &__button {
+    height: rem(46);
+
+    @include hover {
+      border-color: var(--color-accent);
+      background-color: var(--color-accent);
+      color: var(--color-light);
+    }
+
+    & svg {
+      &:first-child {
+        margin-left: rem(19);
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(4);
+      }
+    }
+  }
+
+  &__contents {
+    @include mobile-above {
+      display: contents;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: rem(15);
+    right: rem(15);
+    color: var(--color-light);
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      color: var(--color-red);
+
+      & svg {
+        fill: var(--color-red);
+      }
+    }
+  }
+}

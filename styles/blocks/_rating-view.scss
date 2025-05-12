@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.rating-view {
+  display: inline-flex;
+  column-gap: rem(3);
+  padding: 0 0 rem(18) rem(11);
+
+  &__star {
+    --size: #{rem(15)};
+
+    @include square(var(--size));
+
+    background: url('/icons/star_gray.svg') center/contain no-repeat;
+
+    &.is-active {
+      background: url('/icons/star.svg') center/contain no-repeat;
+    }
+  }
+}

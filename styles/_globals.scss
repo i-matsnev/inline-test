@@ -1,5 +1,62 @@
 @use 'helpers' as *;
 
 body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-size: rem(14);
+  font-weight: 400;
+  color: var(--color-dark);
+}
 
+main {
+  flex-grow: 1;
+}
+
+h2, .h2 {
+  @include fluid-text(22, 18);
+
+  font-weight: 500;
+}
+
+h3, .h3 {
+  @include fluid-text(16, 15);
+
+  font-weight: 500;
+
+  @include mobile {
+    font-weight: 600;
+  }
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-dark);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+b {
+  font-weight: 500;
 }

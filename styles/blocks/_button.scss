@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.button {
+  @include flex-center(true);
+
+  min-width: rem(160);
+  height: rem(36);
+  background-color: transparent;
+  color: var(--color-accent);
+  border: var(--border);
+  border-radius: var(--border-radius-btn);
+}

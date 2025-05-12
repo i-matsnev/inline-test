@@ -9,12 +9,19 @@
   --color-gray: #89817F;
   --color-gray-light: #A69895;
 
+  --color-border: #B2B2B2;
+  --color-border-card: #DEDEDE;
+
   --color-yellow: #F9CE1E;
   --color-green-dark: #043E44;
+  --color-red: #ff3E44;
   --color-accent: #429F3A;
 
   --container-width: #{rem(1440)};
   --container-padding-x: #{rem(187)};
+
+  --border: 1px solid var(--color-border);
+  --border-light: 1px solid #b2b2b270;
 
   --border-radius-btn: #{rem(5)};
   --border-radius-smaller: #{rem(8)};
@@ -23,6 +30,10 @@
   --font-family-base: 'Montserrat', system-ui, sans-serif;
 
   --transition-duration: .2s;
+
+  @include tablet {
+    --container-padding-x: #{rem(80)};
+  }
 
   @include mobile {
     --container-padding-x: #{rem(20)};

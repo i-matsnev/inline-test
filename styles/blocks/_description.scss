@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.description {
+  & p:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+
+  &__contents {
+    @include mobile-above {
+      display: contents;
+    }
+  }
+}
